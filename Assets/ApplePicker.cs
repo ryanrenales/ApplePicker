@@ -34,6 +34,12 @@ public class ApplePicker : MonoBehaviour
         {
             Destroy(tempGO);
         }
+        // Destroy all bad falling apples
+        GameObject[] luckyAppleArray = GameObject.FindGameObjectsWithTag("LuckyApple");
+        foreach (GameObject tempGO in luckyAppleArray)
+        {
+            Destroy(tempGO);
+        }
 
         // Destroy one of the Baskets
         // Get the index of the last Basket in basketList
@@ -50,6 +56,7 @@ public class ApplePicker : MonoBehaviour
             SceneManager.LoadScene("_Scene_0");
         }
     }
+
 
     // Update is called once per frame
     void Update()
